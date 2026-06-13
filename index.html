@@ -1,11 +1,117 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <title>Мой сайт</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Подключение</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Inter,system-ui,sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:
+    radial-gradient(circle at top left,#6ee7ff,transparent 40%),
+    radial-gradient(circle at bottom right,#7c3aed,transparent 40%),
+    #0f172a;
+    overflow:hidden;
+}
+
+.card{
+    width:420px;
+    padding:40px;
+    border-radius:32px;
+
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(30px);
+    -webkit-backdrop-filter:blur(30px);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    box-shadow:
+    0 8px 32px rgba(0,0,0,.3),
+    inset 0 1px 0 rgba(255,255,255,.15);
+
+    text-align:center;
+}
+
+.logo{
+    font-size:42px;
+    margin-bottom:12px;
+}
+
+h1{
+    color:white;
+    font-size:32px;
+    margin-bottom:10px;
+}
+
+p{
+    color:rgba(255,255,255,.7);
+    margin-bottom:30px;
+}
+
+.btn{
+    display:inline-block;
+    text-decoration:none;
+
+    padding:16px 36px;
+    border-radius:18px;
+
+    color:white;
+    font-weight:600;
+    font-size:18px;
+
+    background:rgba(255,255,255,.12);
+
+    border:1px solid rgba(255,255,255,.2);
+
+    backdrop-filter:blur(20px);
+
+    transition:.25s;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+    background:rgba(255,255,255,.2);
+}
+
+.glow{
+    position:absolute;
+    width:350px;
+    height:350px;
+    border-radius:50%;
+    filter:blur(120px);
+    background:#38bdf8;
+    opacity:.25;
+}
+</style>
 </head>
+
 <body>
-    <h1>Привет!</h1>
-    <p>Это мой сайт на GitHub Pages.</p>
+
+<div class="glow"></div>
+
+<div class="card">
+    <div class="logo">⚡</div>
+
+    <h1>Подключение</h1>
+
+    <p>Нажмите кнопку ниже для подключения конфигурации</p>
+
+    <a class="btn"
+       href="happ://add/https://raw.githubusercontent.com/nwl1909/do/refs/heads/main/configibf">
+        Подключить
+    </a>
+</div>
+
 </body>
 </html>
