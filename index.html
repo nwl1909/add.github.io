@@ -287,6 +287,12 @@ footer{
                 Подключить подписку
             </button>
 
+            <button
+                class="btn"
+                onclick="copySubscription2()">
+                Подключить подписку 2
+            </button>
+
         </div>
 
         <div class="back" onclick="goBack()">
@@ -307,6 +313,9 @@ footer{
 
 const SUBSCRIPTION =
 'https://raw.githubusercontent.com/nwl1909/do/refs/heads/main/configibf';
+
+const SUBSCRIPTION2 =
+'https://raw.githubusercontent.com/nwl1909/internetbetterfree/refs/heads/main/configibf2?token=GHSAT0AAAAAAD2LT6GNFIQVHJ7IVAKY2DEU2SFI5JA';
 
 const devices = {
 
@@ -420,6 +429,16 @@ async function copySubscription(){
             'Скопируйте ссылку вручную:',
             SUBSCRIPTION
         );
+    }
+}
+
+
+async function copySubscription2(){
+    try{
+        await navigator.clipboard.writeText(SUBSCRIPTION2);
+        showToast('Вторая ссылка подписки скопирована в буфер обмена');
+    }catch(error){
+        prompt('Скопируйте ссылку вручную:',SUBSCRIPTION2);
     }
 }
 
